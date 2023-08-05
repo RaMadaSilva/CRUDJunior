@@ -1,0 +1,14 @@
+﻿@page
+@model CRUDJunior.Pages.Aluno.ListaDeAlunosModel
+@{
+    ViewData["Title"] = "Lista de Alunos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var aluno in Model.Alunos)
+    {
+        <li>@aluno.NomeCompleto @aluno.DataNascimento</li>
+    }
+</ul>

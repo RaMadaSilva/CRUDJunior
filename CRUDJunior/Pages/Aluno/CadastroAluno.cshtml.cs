@@ -22,7 +22,7 @@ namespace CRUDJunior.Pages.Aluno
                 return Page();
             _handler.Handle(Model);
 
-            return RedirectToPage(); 
+            return RedirectToPage("ListaDeAlunos"); 
         }
         public void OnGet()
         {
