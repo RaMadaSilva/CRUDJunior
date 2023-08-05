@@ -15,6 +15,9 @@ namespace CRUDJunior.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<Notification>();
+            modelBuilder.ApplyConfiguration(new AssinaturaMap());
+            modelBuilder.ApplyConfiguration(new AlunoMap());
+
         }
     }
 }
