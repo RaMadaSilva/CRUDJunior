@@ -1,4 +1,4 @@
-﻿using CRUDJunior.Models.ValueObject;
+﻿using CRUDJunior.Domain.Models.ValueObject;
 
 namespace CRUDJunior.Teste.TesteModels.TesteValueObject
 {

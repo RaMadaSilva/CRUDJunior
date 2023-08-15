@@ -1,5 +1,5 @@
-﻿using CRUDJunior.Models;
-using CRUDJunior.Models.ValueObject;
+﻿using CRUDJunior.Domain.Models;
+using CRUDJunior.Domain.Models.ValueObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;

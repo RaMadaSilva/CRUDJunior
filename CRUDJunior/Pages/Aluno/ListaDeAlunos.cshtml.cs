@@ -1,4 +1,4 @@
-using CRUDJunior.UniteOfWork.Contracts;
+using CRUDJunior.Domain.UniteOfWork;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -12,7 +12,7 @@ namespace CRUDJunior.Pages.Aluno
         {
             _uow = uow;
         }
-        public IEnumerable<CRUDJunior.Models.Aluno> Alunos { get; private set; }
+        public IEnumerable<CRUDJunior.Domain.Models.Aluno> Alunos { get; private set; }
         public void OnGet()
         {
             Alunos = _uow.AlunoRepositorio.GetAll(); 

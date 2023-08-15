@@ -16,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CRUDJunior\CRUDJunior.csproj" />
+    <ProjectReference Include="..\Aplication\CRUDJunior.Aplication.csproj" />
+    <ProjectReference Include="..\Domain\CRUDJunior.Domain.csproj" />
   </ItemGroup>
 
 </Project>

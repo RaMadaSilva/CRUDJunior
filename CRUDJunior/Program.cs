@@ -1,9 +1,7 @@
-using CRUDJunior.Commands;
-using CRUDJunior.Commands.Handlers;
-using CRUDJunior.Commands.Handlers.Contracts;
+using CRUDJunior.Aplication.Commands.Handlers;
 using CRUDJunior.Context;
-using CRUDJunior.UniteOfWork;
-using CRUDJunior.UniteOfWork.Contracts;
+using CRUDJunior.Domain.UniteOfWork;
+using CRUDJunior.Infrastruture.UniteOfWork;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

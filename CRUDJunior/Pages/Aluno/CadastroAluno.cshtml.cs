@@ -1,5 +1,5 @@
-using CRUDJunior.Commands;
-using CRUDJunior.Commands.Handlers;
+using CRUDJunior.Aplication.Commands;
+using CRUDJunior.Aplication.Commands.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
