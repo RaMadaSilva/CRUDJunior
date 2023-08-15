@@ -39,5 +39,20 @@ namespace CRUDJunior.Aplication.Commands.Handlers
 
             return new ResultadoGenericoCommand(true, "Aluno Salvo", aluno); 
         }
+
+        public ICommandResult Handle(EditarAlunoCommand command)
+        {
+            //Validar todas as Notificações 
+            command.Validar(); 
+            if (!command.IsValid)
+                return new ResultadoGenericoCommand(false, "Aluno não pode ser actualizado", command.Notifications);
+            var aluno = _uniteOfWork.AlunoRepositorio.GetById(command.Id);
+            if (aluno is null)
+                return new ResultadoGenericoCommand(false, "Aluno não Existe", string.Empty); 
+            _uniteOfWork.AlunoRepositorio.UpdateAluno(command.Id);
+            _uniteOfWork.Commit();
+
+            return new ResultadoGenericoCommand(true, "Aluno actualizado com sucesso", aluno); 
+        }
     }
 }

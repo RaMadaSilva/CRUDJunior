@@ -6,9 +6,29 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<ul>
-    @foreach (var aluno in Model.Alunos)
-    {
-        <li>@aluno.NomeCompleto @aluno.DataNascimento</li>
-    }
-</ul>
+<div class="mb-3">
+    <a asp-page="./CadastroAluno" class="btn btn-primary">Adicionar Novo Aluno</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome Completo</th>
+            <th>Data de Nascimento</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model.Alunos)
+        {
+            <tr>
+                <td>@aluno.NomeCompleto</td>
+                <td>@aluno.DataNascimento</td>
+                <td>
+                    <a asp-page="./EditarAluno" asp-route-id ="@aluno.Id" class="btn btn-info btn-sm">Editar</a>
+                    <a asp-page-handler="RemoverAluno" asp-route-id ="@aluno.Id" class="btn btn-danger btn-sm">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

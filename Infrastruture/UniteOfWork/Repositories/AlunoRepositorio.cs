@@ -27,7 +27,7 @@ namespace CRUDJunior.UniteOfWork.Repositories
 
         public Aluno GetById(int id)
         {
-           return (Aluno)_context.Alunos.Where(x=>x.Id==id);
+           return _context.Alunos.Where(x=>x.Id==id).FirstOrDefault();
         }
 
         public void SaveAluno(Aluno aluno)
